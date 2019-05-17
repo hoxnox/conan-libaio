@@ -37,7 +37,7 @@ set(HEADER_FILES source_subfolder/src/libaio.h
                  source_subfolder/src/syscall-x86_64.h)
 
 add_library(${CMAKE_PROJECT_NAME} ${SOURCE_FILES} ${HEADER_FILES})
-target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE src)
+target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE source_subfolder/src)
 target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE -fomit-frame-pointer)
 set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES LINK_FLAGS -Wl,--version-script,${CMAKE_CURRENT_SOURCE_DIR}/source_subfolder/src/libaio.map)
 

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from conans import ConanFile, CMake, tools
 from conans.errors import ConanInvalidConfiguration
 import os
@@ -24,6 +23,7 @@ class LibaioConan(ConanFile):
 
     def configure(self):
         del self.settings.compiler.libcxx
+        del self.settings.compiler.cppstd
         if self.settings.os != 'Linux':
             raise ConanInvalidConfiguration("libaio is only designed for Linux.")
 

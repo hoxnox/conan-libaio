@@ -10,7 +10,6 @@ class LibaioConan(ConanFile):
     topics = ("conan", "libaio", "linux", "asynchronous", "io", )
     url = "https://github.com/bincrafters/conan-libaio"
     homepage = "https://pagure.io/libaio"
-    author = "Bincrafters <bincrafters@gmail.com>"
     license = "LGPL-2.1"
     exports = ["LICENSE.md"]
     exports_sources = ["CMakeLists.txt"]

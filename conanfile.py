@@ -28,7 +28,7 @@ class LibaioConan(ConanFile):
             raise ConanInvalidConfiguration("libaio is only designed for Linux.")
 
     def source(self):
-        sha256 = "1e7c9f70fb1dacd685affa1989fed44519f6b60b5d7b73d70960f5d9e88a3a99"
+        sha256 = "e6bc17cba66e59085e670fea238ad095766b412561f90b354eb4012d851730ba"
         tools.get("{0}/archive/libaio-{1}/libaio-libaio-{1}.tar.gz".format(self.homepage, self.version), sha256=sha256)
         extracted_dir = self.name + "-" + self.name + "-" + self.version
         os.rename(extracted_dir, self._source_subfolder)
